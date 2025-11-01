@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Online Shop Pakaian - Fashion Terbaru</title>
+    <style>
+        /* CSS Sederhana untuk Styling */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+            color: #333;
+        }
+        header {
+            background-color: #333;
+            color: white;
+            padding: 15px;
+            text-align: center;
+        }
+        nav {
+            background-color: #444;
+            padding: 10px;
+        }
+        nav ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+        nav ul li {
+            margin: 0 15px;
+        }
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+            padding: 10px;
+            display: block;
+        }
+        nav ul li a:hover {
+            background-color: #555;
+        }
+        .container {
+            max-width: 1200px;
+            margin: 20px auto;
+            padding: 20px;
+        }
+        .category {
+            margin-bottom: 40px;
+        }
+        .category h2 {
+            color: #333;
+            border-bottom: 2px solid #333;
+            padding-bottom: 10px;
+        }
+        .products {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+        }
+        .product {
+            background: white;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            padding: 15px;
+            text-align: center;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+        .product img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+            border-radius: 5px;
+        }
+        .product h3 {
+            margin: 10px 0;
+        }
+        .product p {
+            color: #666;
+        }
+        .price {
+            font-size: 1.2em;
+            color: #e74c3c;
+            font-weight: bold;
+        }
+        .btn {
+            background-color: #27ae60;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            margin-top: 10px;
+        }
+        .btn:hover {
+            background-color: #219a52;
+        }
+        footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 10px;
+            margin-top: 40px;
+        }
+        @media (max-width: 768px) {
+            nav ul {
+                flex-direction: column;
+            }
+            .products {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Selamat Datang di Online Shop Pakaian sictyy shop</h1>
+        <p>Fashion Terlengkap dari Atasan hingga Bawahan dan Lainnya!</p>
+    </header>
+
+    <nav>
+        <ul>
+            <li><a href="#atasan">Atasan</a></li>
+            <li><a href="#bawahan">Bawahan</a></li>
+            <li><a href="#lainnya">Lainnya</a></li>
+            <li><a href="#kontak">Kontak</a></li>
+        </ul>
+    </nav>
+
+    <div class="container">
+        <!-- Kategori Atasan -->
+        <section id="atasan" class="category">
+            <h2>Atasan (Tops)</h2>
+            <div class="products">
+                <div class="product">
+                    <img src="images.jpg" alt="Kaos Polos">
+                    <h3>Kaos Polos</h3>
+                    <p>Kaos katun nyaman untuk sehari-hari. Ukuran S-XXL.</p>
+                    <div class="price">Rp 50.000</div>
+                    <button class="btn" onclick="beli('Kaos Polos')">Beli Sekarang</button>
+                </div>
+                <div class="product">
+                    <img src="https://source.unsplash.com/300x200/?shirt" alt="Kemeja Flanel">
+                    <h3>Kemeja Flanel</h3>
+                    <p>Kemeja casual untuk gaya semi-formal. Warna beragam.</p>
+                    <div class="price">Rp 150.000</div>
+                    <button class="btn" onclick="beli('Kemeja Flanel')">Beli Sekarang</button>
+                </div>
+                <div class="product">
+                    <img src="https://source.unsplash.com/300x200/?blouse" alt="Blus Wanita">
+                    <h3>Blus Wanita</h3>
+                    <p>Blus feminin dengan detail bordir. Cocok untuk kantor.</p>
+                    <div class="price">Rp 120.000</div>
+                    <button class="btn" onclick="beli('Blus Wanita')">Beli Sekarang</button>
+                </div>
+            </div>
+        </section>
+
+        <!-- Kategori Bawahan -->
+        <section id="bawahan" class="category">
+            <h2>Bawahan (Bottoms)</h2>
+            <div class="products">
+                <div class="product">
+                    <img src="https://source.unsplash.com/300x200/?jeans" alt="Celana Jeans">
+                    <h3>Celana Jeans</h3>
+                    <p>Jeans slim fit tahan lama. Ukuran 28-34.</p>
+                    <div class="price">Rp 200.000</div>
+                    <button class="btn" onclick="beli('Celana Jeans')">Beli Sekarang</button>
+                </div>
+                <div class="product">
+                    <img src="https://source.unsplash.com/300x200/?skirt" alt="Rok Pendek">
+                    <h3>Rok Pendek</h3>
+                    <p>Rok A-line ringan untuk musim panas.</p>
+                    <div class="price">Rp 80.000</div>
+                    <button class="btn" onclick="beli('Rok Pendek')">Beli Sekarang</button>
+                </div>
+                <div class="product">
+                    <img src="https://source.unsplash.com/300x200/?pants" alt="Celana Panjang">
+                    <h3>Celana Panjang</h3>
+                    <p>Celana cargo multifungsi untuk petualangan.</p>
+                    <div class="price">Rp 180.000</div>
+                    <button class="btn" onclick="beli('Celana Panjang')">Beli Sekarang</button>
+                </div>
+            </div>
+        </section>
+
+        <!-- Kategori Lainnya -->
+        <section id="lainnya" class="category">
+            <h2>Lainnya (Dress, Jaket, dll.)</h2>
+            <div class="products">
+                <div class="product">
+                    <img src="https://source.unsplash.com/300x200/?dress" alt="Dress Maxi">
+                    <h3>Dress Maxi</h3>
+                    <p>Dress panjang elegan untuk acara spesial.</p>
+                    <div class="price">Rp 250.000</div>
+                    <button class="btn" onclick="beli('Dress Maxi')">Beli Sekarang</button>
+                </div>
+                <div class="product">
+                    <img src="https://source.unsplash.com/300x200/?jacket" alt="Jaket Denim">
+                    <h3>Jaket Denim</h3>
+                    <p>Jaket ringan untuk cuaca dingin. Ukuran unisex.</p>
+                    <div class="price">Rp 220.000</div>
+                    <button class="btn" onclick="beli('Jaket Denim')">Beli Sekarang</button>
+                </div>
+                <div class="product">
+                    <img src="https://source.unsplash.com/300x200/?sweater" alt="Sweater">
+                    <h3>Sweater Hangat</h3>
+                    <p>Sweater wol lembut untuk musim hujan.</p>
+                    <div class="price">Rp 160.000</div>
+                    <button class="btn" onclick="beli('Sweater Hangat')">Beli Sekarang</button>
+                </div>
+            </div>
+        </section>
+
+        <section id="kontak" class="category">
+            <h2>Kontak Kami</h2>
+            <p>Hubungi kami via email: info@fashionshop.com atau WhatsApp: 0812-3456-7890.</p>
+        </section>
+    </div>
+
+    <footer>
+        <p>&copy; 2023 Online Shop Pakaian. Semua hak cipta dilindungi.</p>
+    </footer>
+
+    <script>
+        // JavaScript Sederhana untuk Tombol Beli
+        function beli(produk) {
+            alert('Terima kasih! Anda telah memesan ' + produk + '. Silakan lanjutkan ke checkout (demo saja).');
+        }
+    </script>
+</body>
+</html>
